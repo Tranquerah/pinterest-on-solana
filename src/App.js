@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
+import idl from './idl.json';
+import { Connection } from '@solana/web3.js';
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -68,6 +70,14 @@ const App = () => {
     const { value } = event.target;
     setInputValue(value);
   };
+
+  const getProvider = () => {
+    const connection = new Connection(network, opts.preflightCommitment);
+    const provider = new Provider (
+      connection, window.solana, opts.preflightCommitment,
+    );
+    return provider;
+  }
 
   // Render Methods
 
