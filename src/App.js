@@ -79,10 +79,25 @@ const App = () => {
   };
 
   const sendGif = async () => {
-    if (inputValue.length > 0) {
-      console.log('Gif link:', inputValue);
-    } else {
-      console.log('Empty input. Try again.');
+    if (inputValue.length === 0) {
+      console.log("No media link given!")
+      return
+    }
+    console.log('Media link: ', inputValue);
+    try {
+      const provider = getProvider();
+      const program = new Program(idl, programID, provider);
+
+      await program.rpc.addGif(inputValue, {
+        accounts: {
+          baseAccount: baseAccount.publicKey,
+        },
+      });
+      console.log("Media successfully sent to program ", inputValue)
+
+      await getGifList();
+    } catch (error) {
+      console.log("Error sending media: ", error)
     }
   };
 
