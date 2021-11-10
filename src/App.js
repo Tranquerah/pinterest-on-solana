@@ -158,6 +158,7 @@ const renderConnectedContainer = () => {
           Do One-Time Initialization For Media Program Account
         </button>
       </div>
+      
     )
   } 
 	// Otherwise, we're good! Account exists. User can submit GIFs.
@@ -224,6 +225,7 @@ const renderConnectedContainer = () => {
           <p className="header">🖼 Pinterest Clone on Solana</p>
           <p className="sub-text">
             View your GIF & image collection hosted on Solana ✨
+            <p>Please mak sure to only include .gif or static media formats (.png, .jpeg, .jpg etc.)</p>
           </p>
             {!walletAddress && renderNotConnectedContainer()}
             {/* We just need to add the inverse here! */}
