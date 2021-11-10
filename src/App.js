@@ -28,7 +28,7 @@ const opts = {
 }
 
 // Constants
-const TWITTER_HANDLE = '_nobody';
+const TWITTER_HANDLE = 'nobody';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 // const TEST_GIFS = [
