@@ -181,7 +181,16 @@ const App = () => {
             {/* We use index as the key instead, also, the src is now item.gifLink */}
             {gifList.map((item, index) => (
               <div className='gif-item' key={index}>
-                <img src={item.gifLink} alt='' />
+                {item.gifLink.substr(-3) !== 'mp4' ? (
+                  <img src={item.gifLink} alt='' />
+                ) : (
+                  <video
+                    title={index}
+                    width='600'
+                    height='400'
+                    frameborder='0'
+                    src={item.gifLink}></video>
+                )}
               </div>
             ))}
           </div>
