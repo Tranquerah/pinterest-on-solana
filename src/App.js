@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
+import solanaLogo from './assets/solana.svg';
 import './App.css';
 import idl from './idl.json';
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
@@ -245,6 +246,14 @@ const App = () => {
             href={TWITTER_LINK}
             target='_blank'
             rel='noreferrer'>{`built by @${TWITTER_HANDLE}`}</a>
+          <img alt='Solana Logo' className='solana-logo' src={solanaLogo} />
+          <a
+            className='footer-text'
+            href='https://solscan.io/account/489pCidXNDXqYZvUwBX6okcPzXYzxCHPb8NDNTgzEpDT?cluster=devnet'
+            target='_blank'
+            rel='noreferrer'>
+            Solana Program
+          </a>
         </div>
       </div>
     </div>
