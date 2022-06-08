@@ -240,7 +240,7 @@ const App = () => {
           <p className='sub-text'>
             View your GIF & image collection hosted on Solana ✨
             <p>
-              Please mak sure to only include .gif or static media formats
+              Please make sure to only include .gif or static media formats
               (.png, .jpeg, .jpg etc.)
             </p>
           </p>
